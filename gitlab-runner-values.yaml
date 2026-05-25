@@ -1,0 +1,27 @@
+
+gitlabUrl: "http://gitlab.172.236.161.39.nip.io"
+
+runnerToken: "glrt-fVk9jqHmLT6_6MDOWMxrim86MQpwOjEKdDozCnU6MQ8.01.17199qxtc"
+
+rbac:
+
+  create: true
+
+runners:
+
+  tags: "lke-k8s-runner"
+
+  executor: kubernetes
+
+  config: |
+
+    [[runners]]
+
+      [runners.kubernetes]
+
+        namespace = "gitlab-runner"
+
+        image = "alpine:latest"
+
+        privileged = true
+

@@ -1,12 +1,14 @@
 stages:
-  - test
+  - build
 
-test-runner:
-  stage: test
+build:
+  stage: build
   tags:
     - lke-k8s-runner
-  image: alpine:latest
+
+  image: alpine/git
+
   script:
-    - echo "GitLab Runner on LKE is working"
-    - hostname
-    - uname -a
+    - git clone https://github.com/Tae-juss/lke-gitlab-ci-demo.git
+    - cd lke-gitlab-ci-demo
+    - ls -la
