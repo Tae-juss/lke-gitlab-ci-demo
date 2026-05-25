@@ -12,3 +12,4 @@ build:
     - git clone https://github.com/Tae-juss/lke-gitlab-ci-demo.git
     - cd lke-gitlab-ci-demo
     - ls -la
+    - cat index.html
