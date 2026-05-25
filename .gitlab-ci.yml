@@ -1,0 +1,12 @@
+stages:
+  - test
+
+test-runner:
+  stage: test
+  tags:
+    - lke-k8s-runner
+  image: alpine:latest
+  script:
+    - echo "GitLab Runner on LKE is working"
+    - hostname
+    - uname -a
